@@ -32,6 +32,8 @@ public class DirectorService {
 	public DirectorDTO toDTO(Director director, DirectorDTO directorDTO) {
 		directorDTO.setId(director.getId());
 		directorDTO.setName(director.getName());
+		directorDTO.setCreatedDate(director.getCreatedDate());
+		directorDTO.setUpdatedDate(director.getUpdatedDate());
 		return directorDTO;
 	}
 

@@ -37,6 +37,8 @@ public class ActorService {
 	public ActorDTO toDTO(Actor actor, ActorDTO actorDTO) {
 		actorDTO.setId(actor.getId());
 		actorDTO.setName(actor.getName());
+		actorDTO.setCreatedDate(actor.getCreatedDate());
+		actorDTO.setUpdatedDate(actor.getUpdatedDate());
 		return actorDTO;
 	}
 

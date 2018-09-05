@@ -1,13 +1,19 @@
 package com.bollywood.cinema.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
+
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 @Entity
 @Table(name = "director")
@@ -24,14 +30,14 @@ public class Director implements Serializable{
 	@NotNull(message = "Name could not be null, please provide name")
 	private String name;
 	
-	/*@CreationTimestamp
+	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date createdDate;
 	
 	@UpdateTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date updatedDate;
-	*/
+	
 	
 	public Director() {}
 	
@@ -56,7 +62,7 @@ public class Director implements Serializable{
 		this.name = name;
 	}
 
-	/*public Date getCreatedDate() {
+	public Date getCreatedDate() {
 		return createdDate;
 	}
 
@@ -70,7 +76,7 @@ public class Director implements Serializable{
 
 	public void setUpdatedDate(Date updatedDate) {
 		this.updatedDate = updatedDate;
-	}*/
+	}
 	
 	
 
